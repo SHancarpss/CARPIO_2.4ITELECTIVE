@@ -1,0 +1,44 @@
+let NFT = [];
+
+function mintNFT(name, favoritedrink, sugarlevel, size) {
+    //object
+    const nft = {
+        name : name,
+        favoritedrink : favoritedrink,
+        sugarlevel : sugarlevel,
+        size : size
+    };
+    NFT.push(nft);
+
+}
+
+//loop that will go through an "array" of NFTs
+function listNFTs () {
+    for (let i = 0; i < NFT.length; i++) {
+        console.log("Name: " + NFT[i].name);
+        console.log("Favorite drink: " + NFT[i].favoritedrink);
+        console.log("Sugar level: " + NFT[i].sugarlevel);
+        console.log("Size: " + NFT[i].size);
+        console.log("\n"); // Add a new line for better readability
+    };
+}
+
+// Print the total number of NFTs
+function getTotalSupply() {
+    return NFT.length;
+}
+
+// Call your functions below this line
+
+// Mint some NFTs
+const myNFTs = [];
+myNFTs.push(mintNFT("SDJ", "Teh tarik", "Less", "Large"));
+myNFTs.push(mintNFT("TONY", "Kopi o", "Without", "Medium"));
+myNFTs.push(mintNFT("Shan", "Milo ais", "Normal", "Small"));
+
+
+// List all NFTs
+listNFTs(myNFTs);
+
+// Get the total supply of NFTs
+console.log("Total number of NFTs: " + getTotalSupply());
